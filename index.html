@@ -30,6 +30,7 @@
             
             <div class="overlay" id="startOverlay">
                 <div class="overlay-content">
+                    <img src="AI_Image_1.png" alt="Neon Snake Logo" class="game-logo">
                     <h2 class="overlay-title">READY?</h2>
                     <p class="overlay-text">Swipe or use buttons to control</p>
                     <button class="btn-primary" id="startBtn">START GAME</button>
@@ -42,6 +43,41 @@
                     <p class="final-score">Score: <span id="finalScore">0</span></p>
                     <p class="final-best">Best: <span id="finalBest">0</span></p>
                     <button class="btn-primary" id="restartBtn">PLAY AGAIN</button>
+                </div>
+            </div>
+
+            <!-- Hack Menu -->
+            <div class="hack-menu hidden" id="hackMenu">
+                <div class="hack-header">
+                    <h3>🔓 HACK MENU</h3>
+                    <button class="hack-close" id="hackClose">×</button>
+                </div>
+                <div class="hack-body">
+                    <div class="hack-toggle">
+                        <label>Auto Play</label>
+                        <input type="checkbox" id="autoPlayToggle">
+                    </div>
+                    <div class="hack-toggle">
+                        <label>Ghost Mode (No Collision)</label>
+                        <input type="checkbox" id="ghostModeToggle">
+                    </div>
+                    <div class="hack-toggle">
+                        <label>Infinite Lives</label>
+                        <input type="checkbox" id="infiniteLivesToggle">
+                    </div>
+                    <div class="hack-control">
+                        <label>Speed Multiplier</label>
+                        <input type="range" id="speedMultiplier" min="0.5" max="3" step="0.1" value="1">
+                        <span id="speedValue">1.0x</span>
+                    </div>
+                    <div class="hack-control">
+                        <label>Score Multiplier</label>
+                        <input type="range" id="scoreMultiplier" min="1" max="10" step="1" value="1">
+                        <span id="scoreValue">1x</span>
+                    </div>
+                    <div class="hack-btn" id="hackUnlockAll">
+                        <button class="btn-hack">UNLOCK ALL FOOD</button>
+                    </div>
                 </div>
             </div>
 
