@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Neon Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">NEON SNAKE</h1>
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="score-label">SCORE</span>
+                    <span class="score-value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">BEST</span>
+                    <span class="score-value" id="highScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div class="overlay" id="startOverlay">
+                <div class="overlay-content">
+                    <h2 class="overlay-title">READY?</h2>
+                    <p class="overlay-text">Swipe or use buttons to control</p>
+                    <button class="btn-primary" id="startBtn">START GAME</button>
+                </div>
+            </div>
+
+            <div class="overlay hidden" id="gameOverOverlay">
+                <div class="overlay-content">
+                    <h2 class="overlay-title">GAME OVER</h2>
+                    <p class="final-score">Score: <span id="finalScore">0</span></p>
+                    <p class="final-best">Best: <span id="finalBest">0</span></p>
+                    <button class="btn-primary" id="restartBtn">PLAY AGAIN</button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-row">
+                    <button class="control-btn" data-direction="up" aria-label="Up">▲</button>
+                </div>
+                <div class="control-row">
+                    <button class="control-btn" data-direction="left" aria-label="Left">◀</button>
+                    <button class="control-btn" data-direction="down" aria-label="Down">▼</button>
+                    <button class="control-btn" data-direction="right" aria-label="Right">▶</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
